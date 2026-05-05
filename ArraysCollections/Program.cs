@@ -57,6 +57,10 @@ namespace ArraysCollection
             return numbers;
         }
 
+
+
+
+
         // Method to take an array, copy it, double each element,
         // and return the copy
         public static int[] DoubleNumbers(int[] ogNums)
@@ -81,8 +85,14 @@ namespace ArraysCollection
         
 
         // method to display the contents of an array
+        public static void DisplayArray(int[] numbersArray)
+        {
 
-        // loop through the array and print each element to the console
-
+            // loop through the array and print each element to the console
+            for (int i = 0; i < numbersArray.Length; i ++)
+            {
+                Console.WriteLine(numbersArray[i]);
+            }
+        }
     }
 }
