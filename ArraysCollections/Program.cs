@@ -59,12 +59,26 @@ namespace ArraysCollection
 
         // Method to take an array, copy it, double each element,
         // and return the copy
+        public static int[] DoubleNumbers(int[] ogNums)
+        {
 
-        // create a new array that is the exact same size as the original
+            // create a new array that is the exact same size as the original
+            int[] copiedArray = new int[ogNums.Length];
 
-        // loop through the original array
+            // loop through the original array
+            for ( int i = 0; i < ogNums.Length; i++)
+            {
+                // multiply each element by 2 and store it in the new array
+                copiedArray[i] = ogNums[i] * 2;
+            }
 
-        // multiply each element by 2 and store it in the new array
+            return copiedArray;
+        }
+        
+
+        
+
+        
 
         // method to display the contents of an array
 
