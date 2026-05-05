@@ -28,14 +28,34 @@ namespace ArraysCollection
         }
 
         // Method to get the number from the user (up to 10)
+        public static int[] GetNumbers()
+        {
 
-        // create an array that can hold 10 integers
+            // create an array that can hold 10 integers
+            int[] numbers = new int[10];
 
-        // loop to get the numbers from the user
+            Console.WriteLine("Please enter up to 10 numbers (enter 0 to stop before 10): ");
 
-        // if the user enters 0 , break out of the loop
+            // loop to get the numbers from the user
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Enter Number " + (i + 1) + ": ");
+                string userInput = Console.ReadLine();
+                int enteredNum = Convert.ToInt32(userInput);
 
-        // read the number and store it in the array
+                // if the user enters 0 , break out of the loop
+                if (enteredNum == 0)
+                {
+                    Console.WriteLine("Stopping early!");
+                    break;
+                }
+
+                // store it in the array
+                numbers[i] = enteredNum;
+            }
+
+            return numbers;
+        }
 
         // Method to take an array, copy it, double each element,
         // and return the copy
