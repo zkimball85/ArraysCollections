@@ -41,10 +41,9 @@ namespace ArraysCollection
             {
                 Console.Write("Enter Number " + (i + 1) + ": ");
                 string userInput = Console.ReadLine();
-                int enteredNum = Convert.ToInt32(userInput);
 
                 // if the user enters 0 , break out of the loop
-                if (enteredNum == 0)
+                if (Convert.ToInt32(userInput) == 0)
                 {
                     Console.WriteLine("Stopping early!");
                     break;
