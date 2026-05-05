@@ -42,15 +42,23 @@ namespace ArraysCollection
                 Console.Write("Enter Number " + (i + 1) + ": ");
                 string userInput = Console.ReadLine();
 
+                // try to parse the user input
+                if (!int.TryParse(userInput, out int parsedValue))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    i--; // allow user to try again
+                    continue;
+                }
+
                 // if the user enters 0 , break out of the loop
-                if (Convert.ToInt32(userInput) == 0)
+                if (parsedValue == 0)
                 {
                     Console.WriteLine("Stopping early!");
                     break;
                 }
 
                 // store it in the array
-                numbers[i] = enteredNum;
+                numbers[i] = parsedValue;
             }
 
             return numbers;
